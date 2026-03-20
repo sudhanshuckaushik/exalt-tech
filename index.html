@@ -691,20 +691,18 @@ document.querySelectorAll('#main section, #header').forEach(el => observer.obser
 
 // ══ HIGHLIGHT ANIMATION — observe each em directly ══
 // This is more reliable than cascading .visible through nested sections
-(function() {
-  function checkEms() {
-    document.querySelectorAll('#main em:not(.circle)').forEach(function(em) {
-      if (!em.classList.contains('em-lit')) {
-        var r = em.getBoundingClientRect();
-        if (r.top < window.innerHeight && r.bottom > 0) {
-          em.classList.add('em-lit');
-        }
+function checkEms() {
+  document.querySelectorAll('#main em:not(.circle)').forEach(function(em) {
+    if (!em.classList.contains('em-lit')) {
+      var r = em.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        em.classList.add('em-lit');
       }
-    });
-  }
-  window.addEventListener('scroll', checkEms, { passive: true });
-  setTimeout(checkEms, 100);
-})();
+    }
+  });
+}
+window.addEventListener('scroll', checkEms, { passive: true });
+setTimeout(checkEms, 100);
 
 // Also add .visible to sections for circle animation
 const allSections = document.querySelectorAll('#main section');
