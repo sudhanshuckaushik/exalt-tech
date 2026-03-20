@@ -687,25 +687,7 @@ onScroll(); // run once on load
 
 // ══ ACTIVE NAV: highlight current section ══
 const navItems = document.querySelectorAll('#navigation .menu .item');
-const sections = ['about', 'who', 'what', 'approach'];
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const id = e.target.id;
-      navItems.forEach(item => {
-        const a = item.querySelector('a.link');
-        if (!a) return;
-        item.classList.toggle('active', a.getAttribute('href') === '#' + id);
-      });
-    }
-  });
-}, { threshold: 0, rootMargin: '-10% 0px -60% 0px' });
-
-sections.forEach(id => {
-  const el = document.getElementById(id);
-  if (el) observer.observe(el);
-});
+document.querySelectorAll('#main section, #header').forEach(el => observer.observe(el));
 
 // ══ HIGHLIGHT ANIMATION — observe each em directly ══
 // This is more reliable than cascading .visible through nested sections
