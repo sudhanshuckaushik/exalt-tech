@@ -691,6 +691,7 @@ document.querySelectorAll('#main section, #header').forEach(el => observer.obser
 
 // ══ HIGHLIGHT ANIMATION — observe each em directly ══
 // This is more reliable than cascading .visible through nested sections
+window.addEventListener('load', function() {
 const allEms = document.querySelectorAll('#main section em:not(.circle), #main section section em:not(.circle)');
 const emObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -701,6 +702,7 @@ const emObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0, rootMargin: "0px 0px -5% 0px" });
 allEms.forEach(em => emObs.observe(em));
+});
 
 // Also add .visible to sections for circle animation
 const allSections = document.querySelectorAll('#main section');
