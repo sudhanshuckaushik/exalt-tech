@@ -720,4 +720,24 @@ allSections.forEach(s => visObs.observe(s));
 // ══ WORD CYCLER ══
 const words = ['transforms','modernises','accelerates','empowers','digitises'];
 let wi = 0;
-const wordE
+const wordEl = document.querySelector('.textrotate');
+function rotateWords() {
+  if(wordEl) { wordEl.innerHTML = words[wi]; wi = (wi + 1) % words.length; }
+}
+setInterval(rotateWords, 1000);
+
+function checkEms() {
+  document.querySelectorAll('#main em:not(.circle)').forEach(function(em) {
+    if (!em.classList.contains('em-lit')) {
+      var r = em.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        em.classList.add('em-lit');
+      }
+    }
+  });
+}
+window.addEventListener('scroll', checkEms, { passive: true });
+setTimeout(checkEms, 100);
+</script>
+</body>
+</html>
