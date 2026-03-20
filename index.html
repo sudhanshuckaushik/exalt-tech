@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exalt Tech</title>
+  <meta name="description" content="We are a new kind of technology advisory that identifies digital opportunities and builds sovereign tech capabilities for nations, governments, and institutions. Technology that transforms nations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exalt-tech-drbx.vercel.app/">
+  <meta property="og:title" content="Exalt Tech — Technology that transforms nations">
+  <meta property="og:description" content="We identify digital opportunities and build sovereign tech capabilities for nations, governments, and institutions across the world.">
+  <meta property="og:image" content="https://exaltstrategies.com/images/thumb.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Exalt Tech — Technology that transforms nations">
+  <meta name="twitter:description" content="We identify digital opportunities and build sovereign tech capabilities for nations, governments, and institutions across the world.">
+  <meta name="twitter:image" content="https://exaltstrategies.com/images/thumb.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <style>
 
@@ -702,6 +714,9 @@ function checkEms() {
   });
 }
 window.addEventListener('scroll', checkEms, { passive: true });
+document.addEventListener('scroll', checkEms, {passive:true, capture:true});
+var _ei=setInterval(checkEms,300);setTimeout(function(){clearInterval(_ei);},10000);
+setTimeout(checkEms,500);setTimeout(checkEms,1500);
 setTimeout(checkEms, 100);
 
 // Also add .visible to sections for circle animation
