@@ -699,7 +699,7 @@ const emObs = new IntersectionObserver(entries => {
       emObs.unobserve(e.target);
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0, rootMargin: "0px 0px -5% 0px" });
 allEms.forEach(em => emObs.observe(em));
 
 // Also add .visible to sections for circle animation
