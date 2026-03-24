@@ -545,6 +545,24 @@ body.scrolled #navigation .menu {
 body.scrolled #navigation h1.logo {
   opacity: 0.15;
 }
+
+/* ═══ INTERLUDE DIVIDER ═══ */
+.interlude {
+  width: 100%;
+  padding: 6vw 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #2d1b69 70%, #1a1a2e 100%);
+  position: relative;
+  overflow: hidden;
+}
+.interlude::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
 </style>
 </head>
 <body id="video">
@@ -694,9 +712,59 @@ body.scrolled #navigation h1.logo {
     <p>We wouldn't be technologists if we didn't end on a call to action. We're always looking for exceptional thinkers, engineers, policy experts, and digital strategists to join our team. <a class="underline" href="mailto:info@exaltstrategies.com">Reach out if that's you.</a></p>
   </section>
 
-  <a class="contact open-popup" href="mailto:info@exaltstrategies.com">Let's get to work.</a>
+  <a class="contact open-popup" href="#" onclick="openPopup();return false;">Let's get to work.</a>
 
 </main>
+
+
+  <!-- Exalt Family -->
+  <div id="exalt-family" style="
+    background: #f7f7f5;
+    border-top: 1px solid #e8e8e6;
+    padding: 5vw 8vw 4vw;
+    text-align: center;
+  ">
+    <p style="
+      font-size: 0.65vw;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 2.5vw;
+    ">Part of the Exalt Group</p>
+    <div style="display: flex; justify-content: center; gap: 6vw; align-items: center; flex-wrap: wrap;">
+      <a href="https://exaltstrategies.com" target="_blank" style="text-decoration: none; group: true;">
+        <div style="
+          font-size: 1.1vw;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          color: #2a2a2a;
+          margin-bottom: 0.4vw;
+        ">EXALT STRATEGIES</div>
+        <div style="
+          font-size: 0.6vw;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: #999;
+        ">Policy · Government Relations · Public Affairs</div>
+      </a>
+      <div style="width: 1px; height: 3vw; background: #ddd;"></div>
+      <a href="https://exaltdataanalysis.com" target="_blank" style="text-decoration: none;">
+        <div style="
+          font-size: 1.1vw;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          color: #2d1b69;
+          margin-bottom: 0.4vw;
+        ">EXALT TECH</div>
+        <div style="
+          font-size: 0.6vw;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: #999;
+        ">Technology Advisory · Digital Transformation · Data</div>
+      </a>
+    </div>
+  </div>
 
 <footer id="footer">
   <aside class="cities">
