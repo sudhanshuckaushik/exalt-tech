@@ -699,7 +699,13 @@ onScroll(); // run once on load
 
 // ══ ACTIVE NAV: highlight current section ══
 const navItems = document.querySelectorAll('#navigation .menu .item');
-document.querySelectorAll('#main section, #header').forEach(el => observer.observe(el));
+const sectionObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) entry.target.classList.add('visible');
+    else entry.target.classList.remove('visible');
+  });
+});
+document.querySelectorAll('#main section, #header').forEach(el => sectionObs.observe(el));
 
 // ══ HIGHLIGHT ANIMATION — observe each em directly ══
 // This is more reliable than cascading .visible through nested sections
