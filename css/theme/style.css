@@ -382,3 +382,11 @@ section#who { width: calc(100% + 20rem); }
 @media (max-width: 767px) { #first-text p { font-size: 2.5em; } }
 @media (max-width: 991px) and (min-width: 768px) { #first-text p { font-size: 1.8em; } }
 .sidemenumargin { margin-top: 2rem !important; }
+
+
+/* ══ INTERLUDE + SPACING FIXES ══ */
+.interlude { padding: 4vw 0 !important; background: #fff !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+.interlude::before, .interlude::after { content: '' !important; flex: 1 !important; height: 1px !important; background: #e8e8e6 !important; margin: 0 8vw !important; }
+.interlude span { width: 5px !important; height: 5px !important; border-radius: 50% !important; background: #ccc !important; display: inline-block !important; flex-shrink: 0 !important; font-size: 0 !important; }
+footer { padding-top: 3vw !important; padding-bottom: 3vw !important; }
+#exalt-family { padding: 2.5vw 8vw !important; }
