@@ -565,7 +565,11 @@ body.scrolled #navigation h1.logo {
 }
 
 /* ═══ FOOTER PADDING FIX ═══ */
-footer { padding-top: 4vw !important; }
+footer { padding-top: 3vw !important; padding-bottom: 3vw !important; }
+/* ══ INTERLUDE ══ */
+.interlude{width:100%;padding:5vw 0;background:#fff;display:flex;align-items:center;justify-content:center;}
+.interlude::before,.interlude::after{content:'';flex:1;height:1px;background:#e0e0e0;margin:0 5vw;}
+.interlude span{font-size:0.55vw;letter-spacing:0.4em;text-transform:uppercase;color:#bbb;white-space:nowrap;}
 </style>
 </head>
 <body id="video">
@@ -692,7 +696,8 @@ footer { padding-top: 4vw !important; }
     <div style="width:40px;height:1px;background:rgba(255,255,255,0.2);"></div>
   </div>
 </div>
-<section id="approach">
+<div class="interlude"><span>Our Approach</span></div>
+  <section id="approach">
     <h2>Our Approach</h2>
     <ol>
       <section>
@@ -724,7 +729,7 @@ footer { padding-top: 4vw !important; }
   <div id="exalt-family" style="
     background: #f7f7f5;
     border-top: 1px solid #e8e8e6;
-    padding: 5vw 8vw 4vw;
+    padding: 2.5vw 8vw 2.5vw;
     text-align: center;
   ">
     <p style="
